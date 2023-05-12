@@ -1,0 +1,31 @@
+/* .servtitle::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    background-color: #C49B66;
+    height: 3px;
+    left: 0;
+    bottom: -20px;
+} */
+
+
+
+.servBox::before {
+    content: "";
+    position: absolute;
+    width: 3px;
+    background-color: #C49B66;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.servBox::after {
+    content: "";
+    position: absolute;
+    width: 3px;
+    background-color: #C49B66;
+    height: 100%;
+    right: 0;
+    top: 0;
+}

@@ -1,0 +1,12 @@
+.skills::after {
+    content: "";
+    position: absolute;
+    width: 17%;
+    background-color: #007fff;
+    display: block;
+    height: 3px;
+    text-align: center;
+    border-radius: 10px;
+    bottom: -16px
+}
+

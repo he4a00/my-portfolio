@@ -1,0 +1,19 @@
+
+.footer-icon::before {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 1009px;
+    background-color: #C49B66;
+}
+.footer-effect::before {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    background-color: #C49B66;
+    left: -30px;
+    border-radius: 10px;
+}
+
+

@@ -1,0 +1,13 @@
+.education {
+    position: relative;
+}
+.education::after {
+    position: absolute;
+    content: "";
+    background-color: #077fff;
+    width: 60%;
+    height: 3px;
+    left: 0;
+    bottom: -10px;
+}
+

@@ -1,0 +1,35 @@
+.landing-btn {
+    width: 140px;
+    height: 50px;
+    background-color: #007fff;
+    margin-top: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Roboto mono;
+    transition: 0.5s ease;
+    position: relative;
+    margin: 20px;
+    
+}
+
+.landing-btn:hover {
+    background-color: #5468ff;
+    transition: 0.5s ease;
+}
+
+
+.landing-btn::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 4px;
+    background-color: #007fff;
+    bottom: -50px;
+    left: 0;
+    border-radius: 10px;
+}
+
