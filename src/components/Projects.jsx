@@ -26,6 +26,7 @@ const Projects = () => {
         backgroundColor: "#131414",
         opacity: "0.8",
       }}
+      id="projects"
     >
       <Box
         sx={{
@@ -84,8 +85,13 @@ const Projects = () => {
                           }}
                         >
                           <Stack direction="row">
-                            <Button>Source</Button>
-                            <Button>Visit</Button>
+                            <a href={`${project.source}`}>
+                              <Button>Source</Button>
+                            </a>
+
+                            <a href={`${project.visit}`}>
+                              <Button>Visit</Button>
+                            </a>
                           </Stack>
                         </Box>
                       </CardContent>

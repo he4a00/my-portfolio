@@ -66,7 +66,7 @@ const Hero = () => {
               I'm 19 Years Old {""}
               <br />
               <span style={{ color: "#66b2ff", fontWeight: "bold" }}>
-                And I'm Front-end Developer
+                And I'm Full-Stack Developer
               </span>
             </Typography>
             <button className="landing-btn">Learn More</button>

@@ -1,23 +1,35 @@
 import React, { useState } from "react";
 import "./Navbar.css";
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import AttributionIcon from "@mui/icons-material/Attribution";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import MenuIcon from "@mui/icons-material/Menu";
+import { navlinks } from "./constants";
 
 const Navbar = () => {
   const [navigation, setNavigation] = useState(true);
+  const [after, setAfter] = useState("Home");
+
   const toggleNavigation = () => {
     setNavigation(!navigation);
   };
 
   return (
-    <Box>
+    <Box
+      sx={{
+        backgroundColor: "#131414",
+        position: "sticky",
+        top: 0,
+        zIndex: "1",
+      }}
+    >
       {/* Menu Icon To toggle navbar in small devices */}
       <MenuIcon
-        sx={{ display: { lg: "none", md: "none", sm: "none" } }}
+        sx={{
+          display: { lg: "none", md: "none", sm: "none" },
+        }}
         onClick={toggleNavigation}
         style={{
           color: "#fff",
@@ -42,7 +54,7 @@ const Navbar = () => {
         {/* portfolio icon and text */}
         <Stack
           direction={{ md: "row", lg: "row", xs: "column", sm: "row" }}
-          sx={{ alignItems: "center" }}
+          sx={{ display: { xs: "none", md: "flex", alignItems: "center" } }}
         >
           <AttributionIcon
             style={{ color: "#fff", margin: "10px", fontSize: "35px" }}
@@ -59,24 +71,21 @@ const Navbar = () => {
             gap: { xs: "50px" },
           }}
         >
-          <Typography
-            sx={{ fontFamily: "Roboto Mono" }}
-            className="nav-animation"
-          >
-            Projects
-          </Typography>
-          <Typography
-            sx={{ fontFamily: "Roboto Mono" }}
-            className="nav-animation"
-          >
-            Technologies
-          </Typography>
-          <Typography
-            sx={{ fontFamily: "Roboto Mono" }}
-            className="nav-animation"
-          >
-            About
-          </Typography>
+          {navlinks.map((link, idx) => (
+            <a
+              href={`#${link.goal}`}
+              key={idx}
+              style={{
+                fontFamily: "Roboto Mono",
+                color: "#fff",
+                textDecoration: "none",
+              }}
+              className={link.navName === after && "nav-animation"}
+              onClick={() => setAfter(link.navName)}
+            >
+              {link.navName}
+            </a>
+          ))}
         </Stack>
         <Stack
           direction={{ md: "row", lg: "row", xs: "column", sm: "row" }}
@@ -88,11 +97,25 @@ const Navbar = () => {
           }}
         >
           {/* social media icons */}
-          <FacebookIcon className="icon-hover" />
+          <a
+            href="https://www.facebook.com/ahmmedhashem0/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FacebookIcon style={{ color: "#fff" }} className="icon-hover" />
+          </a>
 
-          <GitHubIcon className="icon-hover" />
+          <a
+            href="https://www.linkedin.com/in/ahmed-hashem-8434b7269/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <LinkedInIcon style={{ color: "#fff" }} className="icon-hover" />
+          </a>
 
-          <LinkedInIcon className="icon-hover" />
+          <a href="https://github.com/he4a00" target="_blank" rel="noreferrer">
+            <GitHubIcon style={{ color: "#fff" }} className="icon-hover" />
+          </a>
         </Stack>
       </Box>
     </Box>

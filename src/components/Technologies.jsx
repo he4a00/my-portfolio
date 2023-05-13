@@ -4,6 +4,7 @@ import Grid from "@mui/material/Grid";
 import "./Technologies.css";
 import { techs } from "./constants";
 import { Zoom } from "react-reveal";
+import { Carousel } from "react-carousel3";
 
 const Technologies = () => {
   return (
@@ -49,36 +50,65 @@ const Technologies = () => {
             display: "flex",
           }}
         >
-          <Zoom>
-            <Grid container>
-              {techs.map((tech) => (
-                <Grid xs={12} md={4} sm={6}>
-                  <Box>
-                    <Stack
-                      sx={{
-                        display: "flex",
-                        justifyContent: "center",
-                        textAlign: "center",
-                        margin: "100px",
-                      }}
-                    >
-                      <i
-                        style={{ fontSize: "50px", marginBottom: "20px" }}
-                        className={tech.icon}
-                      ></i>
+          <Typography
+            sx={{
+              display: { xs: "block", md: "none" },
+              color: "#fff",
+              lineHeight: "2",
+              margin: { xs: "20px" },
+              fontFamily: "Roboto Mono",
+            }}
+            variant="h4"
+          >
+            This Section Not Available on Mobile Devices , <br />
+            Check The Skills{" "}
+            <a
+              style={{ color: "#077fff", textDecoration: "none" }}
+              href="#skills"
+            >
+              BELOW
+            </a>
+          </Typography>
+          <Box sx={{ display: { xs: "none", md: "flex" } }}>
+            <Zoom>
+              <Grid container>
+                <Carousel
+                  height={460}
+                  width={980}
+                  yOrigin={42}
+                  yRadius={48}
+                  autoPlay={true}
+                >
+                  {techs.map((tech) => (
+                    <Grid xs={12} md={4} sm={6}>
+                      <Box>
+                        <Stack
+                          sx={{
+                            display: "flex",
+                            justifyContent: "center",
+                            textAlign: "center",
+                            margin: "100px",
+                          }}
+                        >
+                          <i
+                            style={{ fontSize: "50px", marginBottom: "20px" }}
+                            className={tech.icon}
+                          ></i>
 
-                      <Typography
-                        variant="p"
-                        sx={{ color: "#fff", fontSize: "18px" }}
-                      >
-                        {tech.name}
-                      </Typography>
-                    </Stack>
-                  </Box>
-                </Grid>
-              ))}
-            </Grid>
-          </Zoom>
+                          <Typography
+                            variant="p"
+                            sx={{ color: "#fff", fontSize: "18px" }}
+                          >
+                            {tech.name}
+                          </Typography>
+                        </Stack>
+                      </Box>
+                    </Grid>
+                  ))}
+                </Carousel>
+              </Grid>
+            </Zoom>
+          </Box>
         </Box>
       </Box>
     </Box>

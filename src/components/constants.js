@@ -1,3 +1,22 @@
+export const navlinks = [
+  {
+    navName: "Home",
+    goal: "",
+  },
+  {
+    navName: "Projects",
+    goal: "projects",
+  },
+  {
+    navName: "Technologies",
+    goal: "skills",
+  },
+  {
+    navName: "About",
+    goal: "about",
+  },
+];
+
 export const techs = [
   {
     icon: "devicon-html5-plain-wordmark colored",
@@ -27,6 +46,26 @@ export const techs = [
   {
     icon: "devicon-react-original colored",
     name: "React",
+    id: 5,
+  },
+  {
+    icon: "devicon-express-original colored",
+    name: "Express",
+    id: 5,
+  },
+  {
+    icon: "devicon-nodejs-plain colored",
+    name: "Node",
+    id: 5,
+  },
+  {
+    icon: "devicon-mongodb-plain colored",
+    name: "MongoDB",
+    id: 5,
+  },
+  {
+    icon: "devicon-nextjs-original colored",
+    name: "Next",
     id: 5,
   },
 ];
@@ -62,47 +101,46 @@ export const skills = [
     percent: "80",
     color: "success",
   },
+  {
+    name: "Node.Js",
+    percent: "80",
+    color: "success",
+  },
+  {
+    name: "Express.Js",
+    percent: "80",
+    color: "success",
+  },
+  {
+    name: "MongoDB",
+    percent: "80",
+    color: "success",
+  },
+  {
+    name: "Next.Js",
+    percent: "80",
+    color: "success",
+  },
 ];
 
 export const projects = [
   {
-    projTitle: "Youtube Clone",
-    desc: "Using RapidAPI to create a clone of Youtube , it includes a lot of features , for example it has a Sidebar has a lot of categories to filter the videos that you want , and it has also  search function to search the video you want, and all the videos are playable ",
-    tags: ["React", "Material Mui", "React Router"],
-    source: "https://google.com/",
-    visit: "https://google.com/",
+    projTitle: "Oganiyo [E-Commerce]",
+    desc: "Welcome to our online shopping website, your one-stop destination for fresh and delicious fruits and a wide range of quality food products. We understand the importance of healthy eating and believe that the key to a balanced lifestyle begins with the right ingredients.",
+    tags: [
+      "React",
+      "Redux Toolkit",
+      "React Router",
+      "Express",
+      "Node.js",
+      "MongoDB",
+      "Material UI",
+      "Full-Stack Application",
+    ],
+    source: "https://github.com/he4a00/mern-shopping",
+    visit: "https://oganiyo.netlify.app/",
     image:
-      "https://cdn.discordapp.com/attachments/958066147918499880/1074421883073732628/1.png",
-    id: 1,
-  },
-  {
-    projTitle: "Admin Dashboard",
-    desc: "Using React to create a Dashboard to track the activity of the site , it includes a lot of features , for example it has a charts and graph to make the activity track so easy to read , it has also a data table to view the products and more ..",
-    tags: ["React", "Css", "React Router"],
-    source: "https://google.com/",
-    visit: "https://google.com/",
-    image:
-      "https://cdn.discordapp.com/attachments/958066147918499880/1074421883430252554/2.png",
-    id: 2,
-  },
-  {
-    projTitle: "Student System",
-    desc: "Using React to create a system for school , it has the ability to (Add , Edit , Delete) Students, the system makes it easy to track to absent of the student and it has also auto save file and more ..",
-    tags: ["React", "Redux Toolkit", "Css", "ChartJs"],
-    source: "https://google.com/",
-    visit: "https://google.com/",
-    image:
-      "https://cdn.discordapp.com/attachments/958066147918499880/1074421883698696404/3.jpg",
-    id: 3,
-  },
-  {
-    projTitle: "E-Commerce App",
-    desc: "Using React to create a E-Commerce App that has a lot of products , this site has the ability to brouse the products and it can Add Product To Cart, Delete it from the cart and it can calculate the price for your products and more ..",
-    tags: ["React", "Redux Toolkit", "React Router"],
-    source: "https://google.com/",
-    visit: "https://google.com/",
-    image:
-      "https://cdn.discordapp.com/attachments/958066147918499880/1074421883929370715/4.jpg",
+      "https://media.discordapp.net/attachments/1098895428772184144/1106544651260923964/Screenshot_51.png?width=995&height=676",
     id: 4,
   },
 ];

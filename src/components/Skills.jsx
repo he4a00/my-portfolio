@@ -19,6 +19,7 @@ const Skills = () => {
         backgroundColor: "#131414",
         opacity: "0.7",
       }}
+      id="skills"
     >
       <Box
         sx={{
